@@ -23,3 +23,24 @@ Additional considerations:
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+
+THE PLAN:
+1) draw out wireframe
+2) write out HTML elements:
+  - main section
+  - h2: "Pick a cup any cup!"
+  - 3 divs with ids for left, center, right
+    - each div contains an image and a button
+  - 3 more divs for scorekeeping, each with a span idea wrapped around the tally.
+3) grab DOM elements in JS:
+  - buttons
+  -containers
+  -tallies
+4) add event listeners for each button
+5) write function "revealCup" for randomizing correct cup:
+  - reset normal-cups
+  -assign correct cup image to revealCup
+  -tally total, wins, and losses
+6) stretch goals??
+

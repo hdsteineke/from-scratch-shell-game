@@ -32,7 +32,7 @@ THE PLAN:
   - h2: "Pick a cup any cup!"
   - 3 divs with ids for left, center, right
     - each div contains an image and a button
-  - 3 more divs for scorekeeping, each with a span idea wrapped around the tally.
+  - 3 more divs for scorekeeping, each with a span id wrapped around the tally.
 3) grab DOM elements in JS:
   - buttons
   -containers

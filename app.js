@@ -11,11 +11,27 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 
-console.log(leftContainer, centerContainer, rightContainer, leftButton, centerButton, rightButton, winsEl, lossesEl, totalEl);
 
 // let state
+let correctGuesses = 0;
+let totalGuesses = 0;
+
 
 // set event listeners 
+leftButton.addEventListener('click', () => {
+
+});
+
+centerButton.addEventListener('click', () => {
+  
+});
+
+rightButton.addEventListener('click', () => {
+  
+});
+
+
+
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state

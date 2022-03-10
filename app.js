@@ -50,10 +50,14 @@ function getRandomCup() {
 
 }
 
-function revealCup(userGuess, correctCup) {
+function resetCups() {
     imgOne.src = './assets/normal-cup.png';
     imgTwo.src = './assets/normal-cup.png';
     imgThree.src = './assets/normal-cup.png';
+};
+
+function revealCup(userGuess, correctCup) {
+    resetCups();
 
     totalGuesses++;
 

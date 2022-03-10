@@ -20,21 +20,23 @@ const totalEl = document.getElementById('total');
 let correctGuesses = 0;
 let totalGuesses = 0;
 
-const correctCup = getRandomCup();
 
 
 // set event listeners 
 leftButton.addEventListener('click', () => {
+    const correctCup = getRandomCup();
     revealCup('left', correctCup);
 
 });
 
 centerButton.addEventListener('click', () => {
+    const correctCup = getRandomCup();
     revealCup('center', correctCup);
   
 });
 
 rightButton.addEventListener('click', () => {
+    const correctCup = getRandomCup();
     revealCup('right', correctCup);
   
 });
@@ -60,11 +62,13 @@ function revealCup(userGuess, correctCup) {
     totalGuesses++;
 
 
+    const winner = document.getElementById(`cup-${correctCup}`); 
+
+    winner.src = './assets/correct-cup.PNG';
+
     if (userGuess === correctCup) {
         correctGuesses++;
-
-        let winner = document.getElementById(`${getRandomCup}-cup`); 
-        winner.src = './assets/correct-cup.png';
+    
     }
 
     winsEl.textContent = correctGuesses;

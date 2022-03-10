@@ -1,8 +1,4 @@
 // import functions and grab DOM elements
-const leftContainer = document.getElementById('left-cup');
-const centerContainer = document.getElementById('center-cup');
-const rightContainer = document.getElementById('right-cup');
-
 const imgOne = document.getElementById('cup-left');
 const imgTwo = document.getElementById('cup-center');
 const imgThree = document.getElementById('cup-right');
@@ -20,21 +16,23 @@ const totalEl = document.getElementById('total');
 let correctGuesses = 0;
 let totalGuesses = 0;
 
-const correctCup = getRandomCup();
 
 
 // set event listeners 
 leftButton.addEventListener('click', () => {
+    const correctCup = getRandomCup();
     revealCup('left', correctCup);
 
 });
 
 centerButton.addEventListener('click', () => {
+    const correctCup = getRandomCup();
     revealCup('center', correctCup);
   
 });
 
 rightButton.addEventListener('click', () => {
+    const correctCup = getRandomCup();
     revealCup('right', correctCup);
   
 });
@@ -52,19 +50,25 @@ function getRandomCup() {
 
 }
 
-function revealCup(userGuess, correctCup) {
+function resetCups() {
     imgOne.src = './assets/normal-cup.png';
     imgTwo.src = './assets/normal-cup.png';
     imgThree.src = './assets/normal-cup.png';
+};
+
+function revealCup(userGuess, correctCup) {
+    resetCups();
 
     totalGuesses++;
 
 
+    const winner = document.getElementById(`cup-${correctCup}`); 
+
+    winner.src = './assets/correct-cup.PNG';
+
     if (userGuess === correctCup) {
         correctGuesses++;
-
-        let winner = document.getElementById(`${getRandomCup}-cup`); 
-        winner.src = './assets/correct-cup.png';
+    
     }
 
     winsEl.textContent = correctGuesses;

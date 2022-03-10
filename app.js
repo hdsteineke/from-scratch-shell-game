@@ -1,8 +1,4 @@
 // import functions and grab DOM elements
-const leftContainer = document.getElementById('left-cup');
-const centerContainer = document.getElementById('center-cup');
-const rightContainer = document.getElementById('right-cup');
-
 const imgOne = document.getElementById('cup-left');
 const imgTwo = document.getElementById('cup-center');
 const imgThree = document.getElementById('cup-right');
